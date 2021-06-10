@@ -1,0 +1,82 @@
+import os
+import sys
+import time
+import smtplib
+
+os.system('cls & mode 70, 12 & title email spammer │ by lozza (github.com/9xw)')
+email = input('''
+ [?] Email: ''')
+password = input(" [?] Password: ")
+victim = input(" [?] Victim: ")
+message = input(" [?] Message: ")
+number = int(input(" [?] Amount: "))
+
+class MyApp():
+    def __init__(self):
+        self.email = email
+        self.password = password
+        self.victim = victim
+        self.message = message
+        self.number = number
+
+    def verify(self):
+
+        server1 = smtplib.SMTP("smtp.gmail.com", 587)
+        server1.ehlo()
+        server1.starttls()
+
+        try:
+            server1.login(self.email, self.password)
+        except smtplib.SMTPAuthenticationError:
+            print('''
+ [!] The email or password is wrong''')
+            time.sleep(2)
+            exit()
+
+        MyApp().main()
+
+    def main(self):
+        if len(sys.argv) < 2:
+            os.system('cls')
+            sys.stdout.write(f'''
+            
+        [!] Connected as: {self.email}
+        [!] Victim: {self.victim}
+        [!] Message: {self.message}  
+        [!] Amount: {self.number}
+        
+        ''')
+
+        option = input('''
+ [?] Spam email? [y/n]: ''')
+        if option == 'y':
+            MyApp().spam()
+            os.system("python main.py")
+        if option == 'n':
+            os.system("python main.py")
+        else:
+            print(''' 
+ [!] Invalid option''')
+            time.sleep(0.5)
+        
+    def spam(self):
+        os.system('cls & mode 70, 32 & title email spammer │ by lozza (github.com/9xw)')
+        server2 = smtplib.SMTP("smtp.gmail.com", 587)
+        server2.ehlo()
+        server2.starttls()
+        server2.login(self.email, self.password)
+        i = 0
+        while i < self.number:
+            i+=1
+            server2.sendmail(self.email, self.victim, self.message)
+            if i == 1: 
+                print((f' [>] ''%d Email sent ')%(i))
+            else:
+                print((f' [>] ''%d Emails sent ')%(i))
+            sys.stdout.flush()
+        print('''
+ [!] Process finished''')
+        time.sleep(3)
+            
+if __name__ == '__main__':
+    MyApp().verify()
