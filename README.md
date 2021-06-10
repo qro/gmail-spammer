@@ -3,7 +3,7 @@
 # Email Spammer
 A simple email sender with a spam function using smtplib.
 
-![](https://media.discordapp.net/attachments/631162287968747550/852350900651032606/unknown.png)
+![](https://media.discordapp.net/attachments/631162287968747550/852356466227806223/unknown.png)
 ![](https://media.discordapp.net/attachments/779128625445863474/818427975519043584/unknown.png)
 
 # Information
