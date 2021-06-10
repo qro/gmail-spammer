@@ -11,7 +11,7 @@ victim = input(" [?] Victim: ")
 message = input(" [?] Message: ")
 number = int(input(" [?] Amount: "))
 
-class MyApp():
+class SMTP():
     def __init__(self):
         self.email = email
         self.password = password
@@ -33,7 +33,7 @@ class MyApp():
             time.sleep(2)
             exit()
 
-        MyApp().main()
+        SMTP().main()
 
     def main(self):
         if len(sys.argv) < 2:
@@ -50,7 +50,7 @@ class MyApp():
         option = input('''
  [?] Spam email? [y/n]: ''')
         if option == 'y':
-            MyApp().spam()
+            SMTP().spam()
             os.system("python main.py")
         if option == 'n':
             os.system("python main.py")
@@ -79,4 +79,4 @@ class MyApp():
         time.sleep(3)
             
 if __name__ == '__main__':
-    MyApp().verify()
+    SMTP().verify()
