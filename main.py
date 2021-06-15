@@ -3,7 +3,7 @@ import sys
 import time
 import smtplib
 
-os.system('cls & mode 70, 12 & title email spammer │ by lozza (github.com/9xw)')
+os.system('cls & mode 70, 12 & title email spammer │ by lozza (github.com/qro)')
 email = input('''
  [?] Email: ''')
 password = input(" [?] Password: ")
@@ -58,9 +58,10 @@ class SMTP():
             print(''' 
  [!] Invalid option''')
             time.sleep(0.5)
+            SMTP().main()
         
     def spam(self):
-        os.system('cls & mode 70, 32 & title email spammer │ by lozza (github.com/9xw)')
+        os.system('cls & mode 70, 32 & title email spammer │ by lozza (github.com/qro)')
         server2 = smtplib.SMTP("smtp.gmail.com", 587)
         server2.ehlo()
         server2.starttls()
@@ -70,9 +71,9 @@ class SMTP():
             i+=1
             server2.sendmail(self.email, self.victim, self.message)
             if i == 1: 
-                print((f' [>] ''%d Email sent ')%(i))
+                print((' [>] ''%d Email sent ')%(i))
             else:
-                print((f' [>] ''%d Emails sent ')%(i))
+                print((' [>] ''%d Emails sent ')%(i))
             sys.stdout.flush()
         print('''
  [!] Process finished''')
