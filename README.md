@@ -9,7 +9,7 @@ A simple email sender with a spam function using smtplib.
 # Information
 - Make sure your gmail has less secure apps (https://myaccount.google.com/lesssecureapps).
 - The default SMTP server is gmail.com but can be changed to many others. Just make sure the port is correct.
-- If you need any support, pm my <a href="https://discord.com/users/630087545312509963">discord</a> or <a href="https://t.me/lxw14274">telegram</a>.
+- If you need any support, pm my <a href="https://discord.com/users/630087545312509963">discord</a> or <a href="https://t.me/qro86">telegram</a>.
 
 ---
 ###### This project here has been made for educational purposes only. I do not control the misconduct of my tool. I do not promote the usage of my tool.
