@@ -1,7 +1,4 @@
-import os
-import sys
-import time
-import smtplib
+import os, sys, time, smtplib
 
 os.system('cls & mode 70, 12 & title email spammer │ by lozza (github.com/qro)')
 email = input('''
