@@ -5,7 +5,7 @@ email = input('\n [?] Email: ')
 password = input(" [?] Password: ")
 victim = input(" [?] Victim: ")
 message = input(" [?] Message: ")
-number = int(input(" [?] Amount: "))
+number = input(" [?] Amount: ")
 
 class SMTP():
     def __init__(self):
