@@ -1,8 +1,7 @@
 import os, sys, time, smtplib
 
 os.system('cls & mode 70, 12 & title email spammer │ by lozza (github.com/qro)')
-email = input('''
- [?] Email: ''')
+email = input('\n [?] Email: ')
 password = input(" [?] Password: ")
 victim = input(" [?] Victim: ")
 message = input(" [?] Message: ")
@@ -25,8 +24,7 @@ class SMTP():
         try:
             server1.login(self.email, self.password)
         except smtplib.SMTPAuthenticationError:
-            print('''
- [!] The email or password is wrong''')
+            print('\n [!] The email or password is wrong')
             time.sleep(2)
             exit()
 
@@ -44,16 +42,14 @@ class SMTP():
         
         ''')
 
-        option = input('''
- [?] Spam email? [y/n]: ''')
+        option = input('\n [?] Spam email? [y/n]: ')
         if option == 'y':
             SMTP().spam()
             os.system("python main.py")
         if option == 'n':
             os.system("python main.py")
         else:
-            print(''' 
- [!] Invalid option''')
+            print('\n [!] Invalid option')
             time.sleep(0.5)
             SMTP().main()
         
@@ -72,8 +68,7 @@ class SMTP():
             else:
                 print((' [>] ''%d Emails sent ')%(i))
             sys.stdout.flush()
-        print('''
- [!] Process finished''')
+        print('\n [!] Process finished')
         time.sleep(3)
             
 if __name__ == '__main__':
