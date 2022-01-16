@@ -2,10 +2,10 @@ import os, sys, time, smtplib
 
 os.system('cls & mode 70, 12 & title email spammer │ by lozza (github.com/qro)')
 email = input('\n [?] Email: ')
-password = input(" [?] Password: ")
-victim = input(" [?] Victim: ")
-message = input(" [?] Message: ")
-number = input(" [?] Amount: ")
+password = input(' [?] Password: ')
+victim = input(' [?] Victim: ')
+message = input(' [?] Message: ')
+number = input(' [?] Amount: ')
 
 class SMTP():
     def __init__(self):
@@ -17,7 +17,7 @@ class SMTP():
 
     def verify(self):
 
-        server1 = smtplib.SMTP("smtp.gmail.com", 587)
+        server1 = smtplib.SMTP('smtp.gmail.com', 587)
         server1.ehlo()
         server1.starttls()
 
@@ -45,9 +45,9 @@ class SMTP():
         option = input('\n [?] Spam email? [y/n]: ')
         if option == 'y':
             SMTP().spam()
-            os.system("python main.py")
+            os.system('python main.py')
         if option == 'n':
-            os.system("python main.py")
+            os.system('python main.py')
         else:
             print('\n [!] Invalid option')
             time.sleep(0.5)
@@ -55,7 +55,7 @@ class SMTP():
         
     def spam(self):
         os.system('cls & mode 70, 32 & title email spammer │ by lozza (github.com/qro)')
-        server2 = smtplib.SMTP("smtp.gmail.com", 587)
+        server2 = smtplib.SMTP('smtp.gmail.com', 587)
         server2.ehlo()
         server2.starttls()
         server2.login(self.email, self.password)
