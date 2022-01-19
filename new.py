@@ -1,4 +1,4 @@
-import os, sys, time, json, smtplib
+import os, json, smtplib
 
 os.system('cls & mode 70, 12 & title email spammer │ by lozza (github.com/qro)')
 
@@ -41,7 +41,6 @@ class SMTP():
             i+=1
             server2.sendmail(self.email, self.victim, self.message)
             print((' [>] ''%d sent ')%(i))
-            sys.stdout.flush()
         print('\n [!] Process finished')
         input()
 
