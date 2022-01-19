@@ -6,10 +6,9 @@ with open('config.json') as f:
     config = json.load(f)
 email = config.get('email')
 password = config.get('password')
+victim = config.get('victim')
 message = config.get('message')
-number = config.get('amount')
-
-victim = input('\n [?] Victim: ')
+number = int(input('\n [?] Number of times: '))
 
 class SMTP():
     def __init__(self):
@@ -27,7 +26,7 @@ class SMTP():
         try:
             server1.login(self.email, self.password)
         except smtplib.SMTPAuthenticationError:
-            print('\n [!] The email or password is wrong\n [!] Make sure lesssecureapps is turned on')
+            print('\n [!] The email or password is wrong\n [!] Make sure lesssecureapps is turned on') # https://myaccount.google.com/lesssecureapps
             input()
         SMTP().spam()
     
