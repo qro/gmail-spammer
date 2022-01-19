@@ -29,6 +29,7 @@ class SMTP():
         except smtplib.SMTPAuthenticationError:
             print('\n [!] The email or password is wrong\n [!] Make sure lesssecureapps is turned on')
             input()
+        SMTP().spam()
     
     def spam(self):
         os.system('cls & mode 70, 32 & title email spammer │ by lozza (github.com/qro)')
