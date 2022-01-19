@@ -9,7 +9,7 @@ password = config.get('password')
 message = config.get('message')
 number = config.get('amount')
 
-victim = input(' [?] Victim: ')
+victim = input('\n [?] Victim: ')
 
 class SMTP():
     def __init__(self):
