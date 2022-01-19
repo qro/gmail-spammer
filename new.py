@@ -40,7 +40,10 @@ class SMTP():
         while i < self.number:
             i+=1
             server2.sendmail(self.email, self.victim, self.message)
-            print((' [>] ''%d Email sent ')%(i))
+            print((' [>] ''%d sent ')%(i))
+            sys.stdout.flush()
+        print('\n [!] Process finished')
+        input()
 
 if __name__ == '__main__':
     SMTP().verify()
