@@ -20,7 +20,7 @@ class SMTP():
         self.number = number
     
     def verify(self):
-        server1 = smtplib.SMTP('smtp.gmail.com', 587) # change this to any smtp server you want
+        server1 = smtplib.SMTP('smtp.gmail.com', 587)
         server1.ehlo()
         server1.starttls()
 
