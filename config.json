@@ -1,4 +1,6 @@
 {
     "email": "spam-email-here",
-    "password": "password-here" 
+    "password": "password-here",
+    "message": "message-here",
+    "amount": "amount-here"
 }
