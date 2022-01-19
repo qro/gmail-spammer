@@ -1,4 +1,4 @@
-import os, sys, json, smtplib
+import os, json, smtplib
 
 os.system('cls & mode 70, 12 & title email spammer │ by lozza (github.com/qro)')
 
