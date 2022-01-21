@@ -4,11 +4,6 @@ os.system('cls & mode 70, 12 & title email spammer │ by lozza (github.com/qro)
 
 with open('config.json') as f:
     config = json.load(f)
-email = config.get('email')
-password = config.get('password')
-victim = config.get('victim')
-message = config.get('message')
-number = int(input('\n [?] Number of times: '))
 
 class SMTP():
     def __init__(self):
@@ -45,4 +40,9 @@ class SMTP():
         input()
 
 if __name__ == '__main__':
+    email = config.get('email')
+    password = config.get('password')
+    victim = config.get('victim')
+    message = config.get('message')
+    number = int(input('\n [?] Number of times: '))
     SMTP().verify()
