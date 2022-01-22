@@ -45,4 +45,4 @@ if __name__ == '__main__':
     victim = config.get('victim')
     message = config.get('message')
     number = int(input('\n [?] Number of times: '))
-    SMTP().verify(
+    SMTP().verify()
