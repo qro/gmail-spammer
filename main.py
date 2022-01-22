@@ -1,6 +1,6 @@
 import os, json, smtplib
 
-os.system('cls & mode 70, 12 & title email spammer │ by lozza (github.com/qro)')
+os.system('cls & mode 70, 12 & title gmail spammer │ by lozza (github.com/qro)')
 
 with open('config.json') as f:
     config = json.load(f)
@@ -26,7 +26,7 @@ class SMTP():
         SMTP().spam()
     
     def spam(self):
-        os.system('cls & mode 70, 32 & title email spammer │ by lozza (github.com/qro)')
+        os.system('cls & mode 70, 32')
         server2 = smtplib.SMTP('smtp.gmail.com', 587)
         server2.ehlo()
         server2.starttls()
