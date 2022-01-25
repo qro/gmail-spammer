@@ -16,7 +16,7 @@
  </p>
 
 ## 🛠️ Installation
-[Python](https://www.python.org/downloads/) must be installed on your computer; please get the most recent version.
+[Python](https://www.python.org/downloads/) must be installed on your computer; please get the most recent version. Before running the scripts, ensure that you have all of the required feilds in `config.json` filled in.
 
 ### Windows 🪟
 If you're running Windows, you can [download](https://codeload.github.com/qro/gmail-spammer/zip/refs/heads/master) the .zip file directly from GitHub. In this case, you can still use [Git](https://github.com/git-for-windows/git/releases) to clone my repository. 
