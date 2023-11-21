@@ -41,7 +41,7 @@ $ python3 main.py
 ## ℹ️ Information
 - If your Gmail account continues to return a `SMTPAuthenticationError`, enable less secure app access (https://myaccount.google.com/lesssecureapps). However, this puts your Gmail account at risk, and I am not responsible for any actions you undertake within your account.
 - This project is based on gmail.com, so other email sites won't take emails being sent as "spam" and sent straight to an ignored folder. If you want to use a different email to spam with, just change the SMTP server on lines 22 & 35 with the correct port.
-- If you need any support, pm my [telegram](https://t.me/afqro).
+- If you need any support, send me an email at qro.gh@pm.me or send me a pm my [telegram](https://t.me/ro32pTQHAs).
 
 ---
 ###### This project here has been made for educational purposes only. I do not control the misconduct of my tool. I do not promote the usage of my tool.
