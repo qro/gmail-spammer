@@ -1,10 +1,10 @@
 <p align="center">
 	<a href="https://www.python.org/">
-    	<img src="https://img.shields.io/badge/python-3.12+-3776AB">
-     </a>
-     <a href="https://github.com/qro/gmail-spammer/blob/master/LICENSE">
+        <img src="https://img.shields.io/badge/python-3.12+-3776AB">
+    </a>
+    <a href="https://github.com/qro/gmail-spammer/blob/master/LICENSE">
     	<img src="https://img.shields.io/badge/License-GPL 3.0-3776AB">
-     </a>
+    </a>
 </p>
 
 <h1 align="center">
@@ -13,7 +13,7 @@
 </h1>
 <p align="center">
     Simple email sender with a spam function using smtplib.
- </p>
+</p>
 
 ## 🛠️ Installation
 [Python](https://www.python.org/downloads/) must be installed on your computer; please get the most recent version. Before running the scripts, ensure that you have all of the required feilds in `config.json` filled in.
