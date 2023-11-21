@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="https://www.python.org/">
-    	<img src="https://img.shields.io/badge/python-3.10.2+-3776AB">
+    	<img src="https://img.shields.io/badge/python-3.12+-3776AB">
      </a>
      <a href="https://github.com/qro/gmail-spammer/blob/master/LICENSE">
     	<img src="https://img.shields.io/badge/License-GPL 3.0-3776AB">
