@@ -1,6 +1,6 @@
 import os, json, smtplib
 
-os.system('cls & mode 70, 12 & title gmail spammer │ by lozza (github.com/qro)')
+os.system('cls')
 
 with open('config.json') as f:
     config = json.load(f)
